@@ -13,8 +13,8 @@ export const serverError = (): HttpResponse => ({
   body: new ServerError()
 })
 
-export const success = (data?: any): HttpResponse => ({
+export const ok = (data?: any): HttpResponse => ({
 
   statusCode: 200,
-  body: 'SUCCESS' || { data }
+  body: data
 })
